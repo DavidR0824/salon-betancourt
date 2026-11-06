@@ -255,7 +255,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .section--dark p { color: rgba(246, 237, 241, 0.78); }
 
 /* ---------- Services ---------- */
-.services-grid { display: grid; gap: var(--space-lg); grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.services-grid { display: grid; gap: var(--space-lg); grid-template-columns: 1fr; }
+@media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
 .service-card {
   background: var(--color-surface);
   border: 1px solid var(--color-line);
